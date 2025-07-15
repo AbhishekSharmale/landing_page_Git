@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पोलीस भरती LIVE Webinar - महेश शरमाळे | ₹99</title>
+    <meta name="description" content="पोलीस भरतीसाठी संपूर्ण तयारी - LIVE Webinar फक्त ₹99 मध्ये. Study Plan, Syllabus, Books आणि Strategy मिळवा.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Razorpay -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hind', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffd700 0%, #ff6b00 100%);
+            color: #1a1a1a;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.9);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        .cta-button {
+            background: #1a1a1a;
+            color: #ffd700;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 400px;
+        }
+
+        .countdown-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.9);
+            color: #1a1a1a;
+            border-radius: 10px;
+            padding: 15px 10px;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .countdown-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* What You'll Learn Section */
+        .learn-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .learn-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .learn-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .learn-icon {
+            font-size: 3rem;
+            color: #ff6b00;
+            margin-bottom: 20px;
+        }
+
+        .learn-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .learn-item p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Who Should Join Section */
+        .audience-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .audience-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #ffd700;
+        }
+
+        .audience-item i {
+            font-size: 2.5rem;
+            color: #ff6b00;
+            margin-bottom: 20px;
+        }
+
+        .audience-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* Host Info Section */
+        .host-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .host-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700, #ff6b00);
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .host-photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .host-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .host-bio {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ff6b00 0%, #ffd700 100%);
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-features {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .cta-section .cta-button {
+            background: #1a1a1a;
+            color: #ffd700;
+            font-size: 1.3rem;
+            padding: 20px 50px;
+        }
+
+        /* Registration Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .modal h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff6b00;
+        }
+
+        .form-group input.error {
+            border-color: #dc3545;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff6b00, #ffd700);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success-section {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-section h2 {
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6b00;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.2rem;
+            }
+
+            .countdown-timer {
+                gap: 10px;
+            }
+
+            .countdown-item {
+                min-width: 60px;
+                padding: 12px 8px;
+            }
+
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+
+            .learn-grid,
+            .audience-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                padding: 30px 20px;
+            }
+
+            .sticky-cta {
+                bottom: 10px;
+                right: 10px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🚨 पोलीस भरतीसाठी तयारीचं परफेक्ट प्लॅन मिळवा – फक्त ₹99 मध्ये!</h1>
+            <div class="subheadline">LIVE Webinar – या रविवारी | सकाळी 11 वाजता</div>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown">
+                <div class="countdown-title">Webinar सुरू होण्यासाठी बाकी:</div>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">02</span>
+                        <span class="countdown-label">दिवस</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">15</span>
+                        <span class="countdown-label">तास</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">30</span>
+                        <span class="countdown-label">मिनिटे</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">45</span>
+                        <span class="countdown-label">सेकंद</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="cta-button" onclick="openModal()">
+                <i class="fas fa-ticket-alt"></i> माझं सीट बुक करा – ₹99
+            </button>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="learn-section">
+        <div class="container">
+            <h2 class="section-title">या Webinar मध्ये तुम्हाला काय मिळेल?</h2>
+            <div class="learn-grid">
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <h3>Updated Syllabus</h3>
+                    <p>पोलिस भरतीचा नवीनतम सिलेबस आणि परीक्षा पॅटर्न</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Best Books List</h3>
+                    <p>कोणती पुस्तकं वाचायची आणि कुठून मिळतील</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Study Plan</h3>
+                    <p>आठवड्याचं routine आणि दैनंदिन अभ्यास योजना</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>GK Strategy</h3>
+                    <p>सामान्य ज्ञानाचा अभ्यास कसा करावा</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Current Affairs</h3>
+                    <p>चालू घडामोडी कधी पर्यंत वाचायच्या</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Strategy Tips</h3>
+                    <p>नविन व जुन्या उमेदवारांनी वेगळं कसं वागावं</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Should Join Section -->
+    <section class="audience-section">
+        <div class="container">
+            <h2 class="section-title">हा Webinar कोणासाठी आहे?</h2>
+            <div class="audience-grid">
+                <div class="audience-item">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>पहिल्यांदाच भरती करणारे</h3>
+                </div>
+                <div class="audience-item">
+                    <i class="fas fa-redo-alt"></i>
+                    <h3>जुने प्रयत्न करणारे</h3>
+                </div>
+                <div class="audience-item">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>अभ्यास करणारे पण गोंधळलेले विद्यार्थी</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host Info Section -->
+    <section class="host-section">
+        <div class="container">
+            <div class="host-photo">
+                <img src="Instructor.png" alt="महेश शरमाळे" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\'></i>';">
+            </div>
+            <h2 class="host-name">महेश शरमाळे</h2>
+            <p class="host-bio">
+                पोलीस भरती तज्ञ आणि अनुभवी मार्गदर्शक. 5+ वर्षांचा अध्यापन अनुभव आणि 1000+ यशस्वी विद्यार्थी. 
+                महाराष्ट्रातील तरुणांसाठी प्रेरणाचा स्रोत आणि YouTube वर 50K+ Subscribers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>🔥 ₹99 मध्ये LIVE प्रवेश + PDF मार्गदर्शक + Replay</h2>
+            <div class="cta-features">
+                ✅ LIVE Webinar Access<br>
+                ✅ Downloadable Study Material<br>
+                ✅ Recording for Lifetime Access
+            </div>
+            <button class="cta-button" onclick="openModal()">
+                <i class="fas fa-credit-card"></i> आजच रजिस्ट्रेशन करा
+            </button>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Webinar Registration</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="तुमचे पूर्ण नाव" required>
+                    <div class="error-message" id="nameError">कृपया वैध नाव टाका</div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="मोबाइल नंबर" required>
+                    <div class="error-message" id="phoneError">कृपया वैध मोबाइल नंबर टाका</div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="ईमेल आयडी" required>
+                    <div class="error-message" id="emailError">कृपया वैध ईमेल टाका</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="city" placeholder="तुमचे शहर" required>
+                    <div class="error-message" id="cityError">कृपया शहराचे नाव टाका</div>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="loading" id="loading"></span>
+                    <i class="fas fa-credit-card"></i> ₹99 Payment करा
+                </button>
+            </form>
+            
+            <!-- Success Section -->
+            <div class="success-section" id="successSection">
+                <h2>🎉 Registration Successful!</h2>
+                <p>तुमचे रजिस्ट्रेशन यशस्वी झाले आहे. Webinar link लवकरच पाठवली जाईल.</p>
+                <a href="https://wa.me/919876543210?text=Hi, I registered for Police Bharti Webinar" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp वर संपर्क करा
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky CTA -->
+    <a href="#" class="sticky-cta" onclick="openModal(); return false;">
+        <i class="fas fa-ticket-alt"></i> ₹99 Book करा
+    </a>
+
+    <script>
+        const API_BASE = 'http://localhost:3000/api';
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const sunday = new Date();
+            sunday.setDate(sunday.getDate() + (7 - sunday.getDay()));
+            sunday.setHours(11, 0, 0, 0);
+            
+            const distance = sunday.getTime() - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('registrationModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('registrationModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('registrationModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Form Validation Functions
+        function validateField(field, errorId, validator) {
+            const value = field.value.trim();
+            const errorElement = document.getElementById(errorId);
+            
+            if (!validator(value)) {
+                field.classList.add('error');
+                errorElement.style.display = 'block';
+                return false;
+            } else {
+                field.classList.remove('error');
+                errorElement.style.display = 'none';
+                return true;
+            }
+        }
+
+        function validateName(name) {
+            return name.length >= 2;
+        }
+
+        function validatePhone(phone) {
+            return /^[6-9]\d{9}$/.test(phone);
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function validateCity(city) {
+            return city.length >= 2;
+        }
+
+        // Real-time validation
+        document.getElementById('name').addEventListener('blur', function() {
+            validateField(this, 'nameError', validateName);
+        });
+
+        document.getElementById('phone').addEventListener('blur', function() {
+            validateField(this, 'phoneError', validatePhone);
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            validateField(this, 'emailError', validateEmail);
+        });
+
+        document.getElementById('city').addEventListener('blur', function() {
+            validateField(this, 'cityError', validateCity);
+        });
+
+        // Form Submission
+        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const email = document.getElementById('email');
+            const city = document.getElementById('city');
+            
+            // Validate all fields
+            const isNameValid = validateField(name, 'nameError', validateName);
+            const isPhoneValid = validateField(phone, 'phoneError', validatePhone);
+            const isEmailValid = validateField(email, 'emailError', validateEmail);
+            const isCityValid = validateField(city, 'cityError', validateCity);
+            
+            if (!isNameValid || !isPhoneValid || !isEmailValid || !isCityValid) {
+                return;
+            }
+
+            // Show loading
+            showLoading(true);
+
+            try {
+                // For demo purposes, simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Initialize Razorpay payment
+                const options = {
+                    key: 'rzp_test_5GoMbIIK7rj0Ei',
+                    amount: 9900, // ₹99 in paise
+                    currency: 'INR',
+                    name: 'Police Bharti Webinar',
+                    description: 'महेश शरमाळे - पोलीस भरती LIVE Webinar',
+                    handler: function(response) {
+                        // Payment successful
+                        showSuccess();
+                    },
+                    prefill: {
+                        name: name.value.trim(),
+                        email: email.value.trim(),
+                        contact: phone.value.trim()
+                    },
+                    theme: {
+                        color: '#ff6b00'
+                    },
+                    modal: {
+                        ondismiss: function() {
+                            showLoading(false);
+                        }
+                    }
+                };
+
+                const rzp = new Razorpay(options);
+                rzp.on('payment.failed', function(response) {
+                    showLoading(false);
+                    alert('Payment Failed: ' + response.error.description);
+                });
+                rzp.open();
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Registration failed. Please try again.');
+            }
+            
+            showLoading(false);
+        });
+
+        function showLoading(show) {
+            const loading = document.getElementById('loading');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (show) {
+                loading.style.display = 'inline-block';
+                submitBtn.disabled = true;
+            } else {
+                loading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        }
+
+        function showSuccess() {
+            document.getElementById('registrationForm').style.display = 'none';
+            document.getElementById('successSection').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
