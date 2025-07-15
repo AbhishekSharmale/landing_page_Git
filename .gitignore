@@ -1,0 +1,4 @@
+rzp-key.csv
+*.csv
+.env
+config.js

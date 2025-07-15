@@ -12,6 +12,7 @@
     
     <!-- Razorpay -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="config.js"></script>
     
     <style>
         * {
@@ -800,7 +801,7 @@
                 
                 // Initialize Razorpay payment
                 const options = {
-                    key: 'rzp_test_5GoMbIIK7rj0Ei',
+                    key: RAZORPAY_CONFIG.key_id,
                     amount: 9900, // ₹99 in paise
                     currency: 'INR',
                     name: 'Police Bharti Webinar',
